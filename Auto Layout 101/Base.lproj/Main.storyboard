@@ -95,21 +95,44 @@
                         <viewControllerLayoutGuide type="top" id="Tx2-hL-t52"/>
                         <viewControllerLayoutGuide type="bottom" id="WGH-8z-A19"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Aur-aK-0wt">
+                    <view key="view" contentMode="scaleToFill" id="Aur-aK-0wt" userLabel="Superview">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dP-uU-PUI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E9w-Zb-tWL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-sf-tSQ" userLabel="Horitonal Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VG-Y8-S4d" userLabel="Red">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="333.5"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fuw-Iu-bPz" userLabel="Blue">
+                                                <rect key="frame" x="130" y="0.0" width="245" height="333.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3VG-Y8-S4d" firstAttribute="width" secondItem="I5i-sf-tSQ" secondAttribute="height" multiplier="1:3" id="Ldt-25-SNU"/>
+                                            <constraint firstItem="Fuw-Iu-bPz" firstAttribute="width" secondItem="I5i-sf-tSQ" secondAttribute="height" multiplier="2:3" id="f8E-FJ-svs"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBh-zQ-Les" userLabel="Purple">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3dP-uU-PUI" firstAttribute="top" secondItem="Aur-aK-0wt" secondAttribute="top" id="Ib5-An-3f1"/>
-                            <constraint firstItem="3dP-uU-PUI" firstAttribute="leading" secondItem="Aur-aK-0wt" secondAttribute="leadingMargin" constant="-16" id="Q1Z-fq-x08"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3dP-uU-PUI" secondAttribute="trailing" constant="-16" id="ghi-4t-ZI4"/>
-                            <constraint firstAttribute="bottom" secondItem="3dP-uU-PUI" secondAttribute="bottom" id="tiG-BC-HlB"/>
+                            <constraint firstItem="E9w-Zb-tWL" firstAttribute="leading" secondItem="Aur-aK-0wt" secondAttribute="leading" id="4KL-kz-2cG"/>
+                            <constraint firstItem="E9w-Zb-tWL" firstAttribute="width" secondItem="Aur-aK-0wt" secondAttribute="width" id="VgY-pk-ISa"/>
+                            <constraint firstItem="E9w-Zb-tWL" firstAttribute="height" secondItem="Aur-aK-0wt" secondAttribute="height" id="mPg-BL-XNC"/>
+                            <constraint firstAttribute="bottom" secondItem="E9w-Zb-tWL" secondAttribute="bottom" id="pmd-jS-FXq"/>
                         </constraints>
                     </view>
                 </viewController>
