@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,44 +41,50 @@
                                     <constraint firstAttribute="height" constant="60" id="eat-JL-Ft8"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WXN-8A-3VQ" userLabel="Horizontal Stack View">
-                                <rect key="frame" x="39" y="303.5" width="297" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-qD-9xx">
+                                <rect key="frame" x="7" y="360" width="78" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WXN-8A-3VQ" userLabel="Horizontal Stack View">
+                                <rect key="frame" x="127" y="280" width="385" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="We" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2F-mh-jwf">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2F-mh-jwf">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="667"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-8x-ShV" userLabel="Heart">
-                                        <rect key="frame" x="145" y="0.0" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="EHc-8x-ShV" secondAttribute="height" multiplier="1:1" id="QG1-5i-IXO"/>
-                                        </constraints>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-8x-ShV" userLabel="Heart">
+                                        <rect key="frame" x="130" y="0.0" width="125" height="667"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Swift" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-NE-oVA">
-                                        <rect key="frame" x="210" y="0.0" width="87" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-NE-oVA">
+                                        <rect key="frame" x="260" y="0.0" width="125" height="667"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="EHc-8x-ShV" firstAttribute="width" secondItem="WXN-8A-3VQ" secondAttribute="width" multiplier="1:8" constant="22.875" id="0h8-DU-Uux"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3fA-qD-9xx">
-                                <rect key="frame" x="7" y="360" width="78" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WXN-8A-3VQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8s2-RU-tIj"/>
+                            <constraint firstItem="a8w-NE-oVA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7W0-6R-Eh2"/>
+                            <constraint firstItem="WXN-8A-3VQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1:1" id="8s2-RU-tIj"/>
+                            <constraint firstItem="EHc-8x-ShV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="BPt-yF-Qbz"/>
+                            <constraint firstItem="P2F-mh-jwf" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="Bjp-ac-qmB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="22i-en-w2K" secondAttribute="trailing" id="FG0-0p-s2Y"/>
                             <constraint firstItem="22i-en-w2K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hcc-Ra-Ybd"/>
                             <constraint firstAttribute="bottom" secondItem="22i-en-w2K" secondAttribute="bottom" id="JZk-5u-bsE"/>
-                            <constraint firstItem="WXN-8A-3VQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l2O-So-lDj"/>
+                            <constraint firstItem="EHc-8x-ShV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="Stz-js-nhc"/>
+                            <constraint firstItem="a8w-NE-oVA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="Uan-ys-Kal"/>
+                            <constraint firstItem="P2F-mh-jwf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VVa-Gb-0qp"/>
+                            <constraint firstItem="P2F-mh-jwf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="VZr-dB-6Py"/>
+                            <constraint firstItem="WXN-8A-3VQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1:1" id="l2O-So-lDj"/>
+                            <constraint firstItem="a8w-NE-oVA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lKC-6e-PRF"/>
+                            <constraint firstItem="EHc-8x-ShV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="muE-Lx-mC2"/>
+                            <constraint firstItem="a8w-NE-oVA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="oAB-jC-GAy"/>
+                            <constraint firstItem="EHc-8x-ShV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pGS-wr-hMs"/>
+                            <constraint firstItem="P2F-mh-jwf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uD4-d3-xFz"/>
                         </constraints>
                     </view>
                 </viewController>
